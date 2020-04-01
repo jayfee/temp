@@ -1,0 +1,1 @@
+git log --graph --pretty=oneline --abbrev-commit    可以看到分支的合并情况
