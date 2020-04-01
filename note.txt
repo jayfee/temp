@@ -71,3 +71,11 @@ git tag -d v0.1                      删除标签
 git push origin <tagname>            推送某个标签到远程
 git push origin --tags               一次性推送全部尚未推送到远程的本地标签
 git push origin :refs/tags/v0.1      从远程删除
+
+
+
+不小心进入了 VIM 的界面
+1.按键盘字母 i 进入insert模式
+2.修改最上面那行黄色合并信息,可以不修改
+3.按键盘左上角"Esc"
+4.输入":wq",注意是冒号+wq,按回车键即可
