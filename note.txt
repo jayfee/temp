@@ -1,5 +1,6 @@
-git log --graph   可以看分支合并图
+git log --graph      可以看分支合并图
 git log --graph --pretty=oneline --abbrev-commit    可以看到分支的合并情况
 
+git merge --no-ff -m "merge with no-ff" dev         --no-ff参数，表示禁用Fast forward
 
 
