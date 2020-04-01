@@ -23,15 +23,15 @@ git add .                    把当前所有文件添加到暂存区
 git commit -m "note"         把文件提交到仓库
 git status                   可以时刻掌握仓库当前的状态
 git diff                     可以查看修改内容
-git log                      查看历史记录
+git log                      查看历史记录，日志太长，按回车到底，按q
 git log --pretty=oneline     查看历史记录简洁版
 git reflog                   查看命令历史
 
 git reset --hard HEAD^       回退到上一个版本，HEAD表示当前版本，上个版本是HEAD^，上上个版本就是HEAD^^，往上100个版本HEAD~100
 git reset --hard commit_id   回退到指定版本号
 
-
 git checkout -- readme.txt    把readme.txt文件在工作区的修改全部撤销
+
 
 
 git remote -v                查看远程库信息
@@ -68,9 +68,9 @@ git show <tagname>            查看标签信息
 git tag -a v0.1 -m "version 0.1 released" 1094adb   可以创建带有说明的标签，用-a指定标签名，-m指定说明文字
 
 git tag -d v0.1                      删除标签
-git push origin <tagname>            推送某个标签到远程
-git push origin --tags               一次性推送全部尚未推送到远程的本地标签
-git push origin :refs/tags/v0.1      从远程删除
+git push gitee master <tagname>            推送某个标签到远程
+git push gitee master --tags         一次性推送全部尚未推送到远程的本地标签
+git push gitee master :refs/tags/v0.1      从远程删除
 
 
 
