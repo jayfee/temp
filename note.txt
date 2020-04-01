@@ -1,6 +1,25 @@
-git log --graph      可以看分支合并图
-git log --graph --pretty=oneline --abbrev-commit    可以看到分支的合并情况
+
+Git鼓励大量使用分支：
+
+git branch                   查看分支
+
+git branch <name>            创建分支
+
+git checkout <name>     或者
+git switch <name>            切换分支
+
+git checkout -b <name>  或者
+git switch -c <name>         创建+切换分支
+
+git merge <name>             合并某分支到当前分支
+
+git branch -d <name>         删除分支
 
 git merge --no-ff -m "merge with no-ff" dev         --no-ff参数，表示禁用Fast forward
+
+
+git log --graph             可以看分支合并图
+git log --graph --pretty=oneline --abbrev-commit    可以看到分支的合并情况
+
 
 
