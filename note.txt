@@ -12,10 +12,11 @@ ls -ah             显示所有包括隐藏
 cat  <name>        打开文件
 
 
+git配置
 git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
-
+git命令
 git init   命令把这个目录变成Git可以管理的仓库
 
 git add <file>               把指定文件添加到暂存区
