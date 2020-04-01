@@ -1,25 +1,73 @@
+cmd常用文件命令
 
-Git鼓励大量使用分支：
+mkdir <name>       新建文件夹name
+rmdir /s/q <name>  删除文件夹以及文件夹内所有内容（/s是删除所有子目录以及其中的内容；/q是在删除时，不提示yes or no）
+cd <name>          进入文件夹
+cd .>readme.txt    在当前目录下新建readme.txt文件
+del <name>         删除文件
+pwd                查看当前路径
+cd..               返回到上层目录
+ls  或  dir        显示目录下的文件
+ls -ah             显示所有包括隐藏
+cat  <name>        打开文件
+
+
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+
+git init   命令把这个目录变成Git可以管理的仓库
+
+git add <file>               把指定文件添加到暂存区
+git add .                    把当前所有文件添加到暂存区
+git commit -m "note"         把文件提交到仓库
+git status                   可以时刻掌握仓库当前的状态
+git diff                     可以查看修改内容
+git log                      查看历史记录
+git log --pretty=oneline     查看历史记录简洁版
+git reflog                   查看命令历史
+
+git reset --hard HEAD^       回退到上一个版本，HEAD表示当前版本，上个版本是HEAD^，上上个版本就是HEAD^^，往上100个版本HEAD~100
+git reset --hard commit_id   回退到指定版本号
+
+
+git checkout -- readme.txt    把readme.txt文件在工作区的修改全部撤销
+
+
+git remote -v                查看远程库信息
+git remote rm origin         删除已关联的名为origin的远程库
+
+git remote add gitee  git@gitee.com:jayfee/temp.git        关联Gitee的远程库
+git remote add github git@github.com:jayfee/temp.git       关联GitHub的远程库
+
+git push gitee master        推送到Gitee
+git push github master       推送到GitHub
 
 git branch                   查看分支
-
 git branch <name>            创建分支
 
-git checkout <name>     或者
+git checkout <name>    或者
 git switch <name>            切换分支
 
-git checkout -b <name>  或者
+git checkout -b <name> 或者
 git switch -c <name>         创建+切换分支
 
 git merge <name>             合并某分支到当前分支
-
-git branch -d <name>         删除分支
-
 git merge --no-ff -m "merge with no-ff" dev         --no-ff参数，表示禁用Fast forward
 
+git branch -d <name>         删除分支
 
 git log --graph             可以看分支合并图
 git log --graph --pretty=oneline --abbrev-commit    可以看到分支的合并情况
 
 
+git tag <name>                可以打一个新标签
+git tag <name> <commit id>    指定提交打标签，id看git log
+git tag                       查看标签
+git show <tagname>            查看标签信息
+git tag -a v0.1 -m "version 0.1 released" 1094adb   可以创建带有说明的标签，用-a指定标签名，-m指定说明文字
 
+git tag -d v0.1                      删除标签
+git push origin <tagname>            推送某个标签到远程
+git push origin --tags               一次性推送全部尚未推送到远程的本地标签
+git push origin :refs/tags/v0.1      从远程删除
